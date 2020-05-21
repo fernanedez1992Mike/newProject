@@ -1,0 +1,37 @@
+/* Fonts */
+
+@mixin headerFont {
+    font-family: $f1;
+    font-weight: 600;
+    font-kerning: auto;
+    line-height: 1.2l;
+    color: $c1;
+    font-size: 1.75rem;
+}
+
+@mixin bodyCopy {
+    font-family: $f2;
+    font-weight: 100;
+    font-kerning: unset;
+    line-height: 1.8;
+    width: 487px;
+}
+
+@mixin displayFont {
+    font-family: $f3;
+    font-weight: 100;
+    color: darken($c1, 10);
+}
+
+@mixin fullScreen {
+    width:100vw;
+    height: 100vh;
+    padding: 2rem 0;
+}
+
+@mixin contentBlock {
+    padding: 4rem 0;
+    margin:auto;
+    z-index: 4;
+    border-bottom: 1px solid $c1;
+}

@@ -1,0 +1,133 @@
+#section0 {
+    @include fullScreen;
+        .jumbotron {
+            height: 100vh;
+            background-image: url(/dist/img/caffeine-coffee-cup-mug-134577.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            
+            
+            .carousel {
+                width: 660px;
+                height: 485px;
+                right:10rem;
+                bottom: 2rem;
+                padding:1rem;
+                object-position: center;
+                object-fit: cover;
+                overflow: hidden;
+            }
+
+        }
+}
+
+#section1  {
+    @include fullScreen;
+    @include contentBlock;
+
+    #slider1 {
+        width: 100%;
+        height: 575px;
+        margin:10%;
+        display:flex;
+        overflow-y: hidden;
+        object-fit: cover;
+        z-index: 3;
+
+        .prev, .next {
+            color: $c3;
+            font-weight: 200;
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            padding: 5px;
+            display: flex;
+            margin-left: 20px;
+
+        }  .next {
+            left: 95%;
+
+        }
+
+        .prev:hover, .next:hover {
+            background: $c2;
+            border-radius: 100%;
+            cursor: pointer;
+        }
+
+        .dots {
+            position: absolute;
+            top: 85%;
+            
+            .dot{
+                color: $c2;
+            }
+        }
+        .dots {
+            display:flex;
+            color: red;
+        }
+    }
+}
+
+#section2 {
+    @include fullScreen;
+    @include contentBlock;
+
+    #slider2 {
+        width: 100%;
+        height: 575px;
+        margin:10%;
+        display:flex;
+        overflow-y: hidden;
+        object-fit: cover;
+        z-index: 3;
+
+        .prev, .next {
+            color: $c3;
+            font-weight: 200;
+            position: absolute;
+            top: 50%;
+            right: 5%;
+            padding: 5px;
+            display: flex;
+            margin-left: 20px;
+
+        }  .next {
+            right: 95%;
+
+        }
+
+        .prev:hover, .next:hover {
+            background: $c2;
+            border-radius: 100%;
+            cursor: pointer;
+        }
+
+        .dots {
+            position: absolute;
+            top: 85%;
+            
+            .dot{
+                color: $c2;
+            }
+        }
+
+        .dots {
+            display:flex;
+            color: red;
+        }
+    }
+}
+
+#section3 {
+    @include fullScreen;
+    @include contentBlock;
+}
+
+#section4 {
+    @include fullScreen;
+    @include contentBlock;
+}
