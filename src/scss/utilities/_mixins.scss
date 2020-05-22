@@ -26,12 +26,19 @@
 @mixin fullScreen {
     width:100vw;
     height: 100vh;
-    padding: 2rem 0;
+}
+
+@mixin background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 @mixin contentBlock {
     padding: 4rem 0;
-    margin:auto;
+    margin-top: 25%;
     z-index: 4;
     border-bottom: 1px solid $c1;
+    display:block;
 }

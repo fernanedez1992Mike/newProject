@@ -1,13 +1,9 @@
 #section0 {
     @include fullScreen;
         .jumbotron {
-            height: 100vh;
-            background-image: url(/dist/img/caffeine-coffee-cup-mug-134577.jpg);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            
+            background-image:url(/assets/img/two-cups-under-espresso-maker-1724194.a2c5cf5c.jpg);
+            height:100vh;
+            @include background;
             
             .carousel {
                 width: 660px;
@@ -19,7 +15,6 @@
                 object-fit: cover;
                 overflow: hidden;
             }
-
         }
 }
 
