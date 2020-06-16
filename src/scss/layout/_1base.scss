@@ -4,31 +4,8 @@ html {
     margin:0;
 }
 
-.respImg {
-    width:100%;
-    height: auto;
-    transform: scale(1, 1);   
-}
-
-.thumbnail {
-    object-fit: cover;
-    object-position: center;
-    width:225px;
-    height:225px; 
-}
-
-.portraitImg {
-    width: 395px;
-    height: 488px;
-    object-fit: cover;
-    object-position: center;
-}
-
-.medImg {
-    height: 488px;
-    width: auto;
-    margin: auto;
-
+body {
+    z-index:1;
 }
 
 h1, h2 {
@@ -41,4 +18,21 @@ h4,h6 {
 
 p {
     @include bodyCopy;
+}
+
+.imgRes {
+    width:100%;
+    height: auto;
+}
+
+.ImgPort {
+    width: 345px;
+    height: 540px;
+    @include objectFit;
+}
+
+.thumbnail {
+    height: 275px;
+    width: 275px;
+    @include objectFit;
 }

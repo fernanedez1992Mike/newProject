@@ -26,19 +26,65 @@
 @mixin fullScreen {
     width:100vw;
     height: 100vh;
+    z-index: 0;
 }
 
-@mixin background {
+@mixin fixed-Background {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    margin: 0 auto;
 }
 
-@mixin contentBlock {
-    padding: 4rem 0;
-    margin-top: 25%;
-    z-index: 4;
-    border-bottom: 1px solid $c1;
-    display:block;
+@mixin objectFit {
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+@mixin boxModel {
+    margin: 0 auto;
+    border: 0px;
+    padding: 0 20px;
+    width: auto;
+    height: 0 auto;
+    display: inline-block;
+    z-index: 3;
+    overflow: hidden;
+    box-shadow: 2px 1px solid black ;
+}
+
+@mixin centerContent {
+    top: 20vh;
+    bottom: 20vh;
+    position: relative;
+    @include transition;
+}
+
+@mixin transition {
+    transition: 1s linear 1s;
+    transform: translate(10px, 0px);
+    color: lighten($c2, 10);
+}
+
+@mixin fadeIn {
+    /* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
 }
