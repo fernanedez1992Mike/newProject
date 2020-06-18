@@ -1,43 +1,15 @@
 import {invoice} from './classes/Invoice';
 import {payments} from './classes/payments';
 import {HasFormatter} from './interfaces/HasFormmatter';
-import { listTemplate } from './classes/listTemplate';
+import {listTemplate} from './classes/listTemplate';
+
+
+
 
 let docOne: HasFormatter;
-let docTwo: HasFormatter;
-
 docOne = new invoice ('Yoshi', 'web work', 250);
-docTwo = new payments ('John', 'Logo', 150 );
-
 let docs: HasFormatter[] = [];
 docs.push(docOne);
-docs.push(docTwo);
-
-console.log(docs);
-/* Sections */
-const section0 = document.getElementById("section0");
-const section1 = document.getElementById("section1");
-const section2 = document.getElementById("section2");
-
-let sectionID: Array<any> = [section0, section1, section2];
-
-/* Brand Colors */
-const c1: string = '#932A2B';
-const c2: string = '#FCBE79';
-const c3: string = '#FFE5BE';
-
-let brandColors: string[];
-brandColors = [c1, c2, c3];
-
-let strArr: Array<string>;
-let numArr: Array<number>;
-let boolArr: Array<boolean>;
-
-/* ContentBlock includes | h2-header,h6-subHeader,p-bodyCopy, h4-price */
-let contentBlock = document.getElementsByClassName('contentBlock');
-let bodyCopy = document.getElementsByTagName('p');
-
-/* Form Selections */
 
 let form = document.querySelector('.new-item-form') as HTMLFormElement;
 let inputs = document.querySelectorAll('input')!;
@@ -90,17 +62,23 @@ const greetPerson = (person: isPerson) => {
     console.log(`hello`, person.name);
 }
 
-let next:any = document.getElementById("wrapperNext") as HTMLElement;
-let prev: any = document.getElementById("wrapperPrev") as HTMLElement;
-let wrapperContainer: any = document.getElementById("wrapperProduct0") as HTMLElement;
-let items:any = document.getElementsByClassName('wrapperItem')!;
+greetPerson(me);
 
-console.log(items);
 
-next.addEventListener('click' , function(){
-        wrapperContainer.style.backgroundColor = 'yellow';
-        items.style.display = 'none';
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

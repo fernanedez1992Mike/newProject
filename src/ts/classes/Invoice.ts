@@ -1,6 +1,5 @@
 import { HasFormatter } from '../interfaces/HasFormmatter';
 // Classes
-
 export class invoice implements HasFormatter {
 
     constructor(
@@ -13,5 +12,4 @@ export class invoice implements HasFormatter {
     format() {
         return `${this.client} Loves Money ${this.amount} for ${this.details} `
     }
-
 }

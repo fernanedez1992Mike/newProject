@@ -2,7 +2,6 @@ import { HasFormatter } from "../interfaces/HasFormmatter";
 
 export class listTemplate {
     constructor(private container: HTMLUListElement){} 
-
     render(item: HasFormatter, heading: string, pos: 'start' | 'end'){
         const li = document.createElement('li');
         const h4 = document.createElement('h3');
