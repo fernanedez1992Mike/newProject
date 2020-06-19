@@ -2,7 +2,7 @@ import {invoice} from './classes/Invoice';
 import {payments} from './classes/payments';
 import {HasFormatter} from './interfaces/HasFormmatter';
 import {listTemplate} from './classes/listTemplate';
-
+import Slider, { ISlideConfig } from './classes/Slider'
 
 let docOne: HasFormatter;
 docOne = new invoice ('Yoshi', 'web work', 250);
@@ -172,39 +172,20 @@ console.log(bioBlock.bodyCopy, bioBlock.h1, bioBlock.welcome);
 let newImg = new Image ('New image', 'Image title', 'image src');
 console.log(newImg.bodyCopy, newImg.h1, newImg.img);
 
-
-let slideIndex:number = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n:number){
-    return showSlides( slideIndex += n );
-}
-
-function currentSlide(n: number){
-    return showSlides( slideIndex = n);
-}
-
-// I do not understand why plusSides and currentSlide is returned as undefined?
-
-function showSlides(n:number):void {
-    let i;
-    let slides: NodeListOf<HTMLElement> = document.querySelectorAll('.wrapperItem');
-    let dots: NodeListOf<HTMLElement> = document.querySelectorAll('.dot');
-
-    if(n > slides.length) {slideIndex = 1};
-    if (n < 1) {slideIndex = slides.length};
-    for (i = 0; i < slides.length; i++){
-        slides[i].style.display = 'none';
+const productSlides: Array<ISlideConfig> = [
+    {
+        title: "Late Knight Espresso",
+        image: "./assets/img/Late Knight.png",
+        price: 1295
+    },
+    {
+        title: "Blonde Roast Espresso",
+        image: "./assets/img/Enlighten.ff851a92.0b192409.png",
+        price: 1295
     }
-    for (i = 0; i < dots.length; i++){
-        dots[i].className = dots[i].className.replace(' active', '');
-    }
-    slides[slideIndex -1].style.display = 'block';
-    dots[slideIndex -1].className += 'active';
-}
+]
 
-
+new Slider(".slider__container.slider-1", productSlides)
 
 
 
