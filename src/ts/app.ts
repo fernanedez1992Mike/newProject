@@ -175,12 +175,12 @@ console.log(newImg.bodyCopy, newImg.h1, newImg.img);
 const productSlides: Array<ISlideConfig> = [
     {
         title: "Late Knight Espresso",
-        image: "./assets/img/Late Knight.png",
+        image: require("../../assets/img/Late Knight.png"),
         price: 1295
     },
     {
         title: "Blonde Roast Espresso",
-        image: "./assets/img/Enlighten.ff851a92.0b192409.png",
+        image: require("../../assets/img/Enlighten.ff851a92.0b192409.png"),
         price: 1295
     }
 ]
