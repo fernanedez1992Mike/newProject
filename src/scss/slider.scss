@@ -10,6 +10,12 @@ $baseName: ".slider__";
   }
   &item{
     float: left;
+    img {
+      display: block;
+      max-height: 300px;
+      margin: 0 auto;
+      max-width: 100%;
+    }
   }
   &stage{
     position: relative;
