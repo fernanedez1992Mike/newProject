@@ -1,0 +1,51 @@
+$baseName: ".slider__";
+
+#{$baseName}{
+  &container, &stage-wrapper{
+    overflow: hidden;
+  }
+  &stage-wrapper, &controls{
+    width: 100%;
+    max-width: 100%;
+  }
+  &item{
+    float: left;
+    img {
+      display: block;
+      max-height: 300px;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+  &stage{
+    position: relative;
+    transform: translate3D(0,0,0);
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+    transition-property: transform;
+  }
+  &controls, &dots{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &control{
+    cursor: pointer;
+  }
+  &dot{
+    width: 0.75em;
+    height: 0.75em;
+    border-radius: 50%;
+    background-color: #eee;
+    transition-duration: 0.4s;
+    transition-property: background-color;
+    transition-timing-function: ease-in-out;
+    &:not(:first-child){
+      margin-left: 5px;
+    }
+    &#{$baseName}dot-active{
+      background-color: #ccc;
+    }
+  }
+}
